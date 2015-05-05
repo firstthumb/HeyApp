@@ -1,2 +1,3 @@
 heyapp-server/.idea/
 *.iml
+heyapp-server/target/

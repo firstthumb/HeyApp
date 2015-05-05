@@ -25,6 +25,9 @@ public class UserResource {
         get(API_CONTEXT + "/users/:id", "application/json", (request, response)
                 -> userService.find(request.params(":id")), new JsonTransformer());
 
+        post(API_CONTEXT + "/register", "application/json", (request, response)
+                -> userService.register(request.body()), new JsonTransformer());
+
         get(API_CONTEXT + "/users", "application/json", (request, response)
                 -> userService.findAll(), new JsonTransformer());
     }
